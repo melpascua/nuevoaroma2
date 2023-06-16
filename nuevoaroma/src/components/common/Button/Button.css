@@ -1,0 +1,18 @@
+button {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #ffffff;
+    border: 1px #a8723c solid;
+    padding: 5px 15px 5px 15px;
+    transition-duration: 0.5s;  
+    transition-property: all;
+    color: #715138; 
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: #a8723c;
+    color: #715138;
+}

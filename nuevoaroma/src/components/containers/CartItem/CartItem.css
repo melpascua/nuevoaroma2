@@ -1,0 +1,18 @@
+.carrito-producto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: black;
+}
+
+.carrito-producto img {
+    width: 8rem;
+    height: 8rem;
+    margin-left: 20px;
+}
+
+.carrito h3 {
+    font-size: 15px;
+}

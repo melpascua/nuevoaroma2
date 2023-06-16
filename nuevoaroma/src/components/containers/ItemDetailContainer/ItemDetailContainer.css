@@ -1,0 +1,7 @@
+.ItemDetailContainer {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #715138;
+}

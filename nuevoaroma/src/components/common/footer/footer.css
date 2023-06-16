@@ -1,0 +1,32 @@
+.hola {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #aa9d8c;
+    border-top: 2px #a8723c solid;
+    min-height: 1vh;
+    margin-top: 5px;
+    width: 100%;
+}
+
+footer a img {
+    width: 50px;
+    height: 50px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.derechos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.derechos h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
