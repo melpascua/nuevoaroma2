@@ -3,7 +3,6 @@ import CartItem from "../CartItem/CartItem";
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import Button from "../../common/Button/Button";
 import Footer from '../../common/footer';
 
 const Cart = () => {
@@ -27,7 +26,7 @@ const Cart = () => {
                     <CartItem key={prod.id} {...prod} />
                 ))}
                 <h1>Total: ${obtenerTotal()}</h1>
-                <Button onClick={limpiar}>Limpiar carrito</Button>
+                <button id='btt' onClick={limpiar}>Comprar</button>
             </div>
             <div>
                 <Footer />

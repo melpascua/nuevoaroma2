@@ -4,6 +4,9 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css';
 import { useParams } from 'react-router-dom';
 
+import { getDoc, doc } from 'firebase/firestore';
+import { db } from '../../../main';
+
 
 
 const ItemDetailContainer = () => {
@@ -12,10 +15,15 @@ const ItemDetailContainer = () => {
     const {itemId} = useParams()
 
     useEffect(() => {
-        obtenerProductosId(itemId)
-            .then(response => {
-                setProducto(response);
-            })
+
+        const docRef = doc(db, 'Items', itemId)
+
+        getDoc(docRef)
+        .then(response => {
+            const data = response.data()
+            const productosAdaptados = { id: response.id, ...data}
+            setProducto(productosAdaptados)
+        })
             .catch(error => {
                 console.error(error);
             });
