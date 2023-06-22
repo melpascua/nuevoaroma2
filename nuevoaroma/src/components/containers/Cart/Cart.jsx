@@ -26,7 +26,8 @@ const Cart = () => {
                     <CartItem key={prod.id} {...prod} />
                 ))}
                 <h1>Total: ${obtenerTotal()}</h1>
-                <button id='btt' onClick={limpiar}>Comprar</button>
+                <button id='btt' onClick={limpiar}>Limpiar carrito</button>
+                <Link to={"/checkout"}>Comprar</Link>
             </div>
             <div>
                 <Footer />
