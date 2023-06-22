@@ -9,7 +9,7 @@ const Checkout = () => {
 
     const [ordenId, setOrdenId] = useState('')
 
-    const { carrito, total, limpiar } = useContext(CartContext);
+    const { carrito, obtenerTotal, limpiar } = useContext(CartContext);
 
     const generarOrden = async ({ nombre, celular, email }) => {
 
@@ -20,7 +20,7 @@ const Checkout = () => {
                     nombre, celular, email
                 },
                 item: carrito,
-                total: total,
+                total: obtenerTotal(),
                 date: Timestamp.fromDate(new Date())
             }
 
@@ -53,12 +53,12 @@ const Checkout = () => {
                 }
             })
 
-            if (sinStock === 0) {
+            if (sinStock.length === 0) {
                 await batch.commit()
 
                 const ordenRef = collection(db, 'orders')
 
-                const ordenAgregada = await addDoc(ordenRef, objOrder)
+                const ordenAgregada = await addDoc(ordenRef, orden)
 
                 setOrdenId(ordenAgregada.id)
                 limpiar()
